@@ -263,7 +263,180 @@ ul, ol {
 }
 
 /* ==========================================================================
-   HEADER & CAPSULE-TYPE MENU BUTTONS (SINGLE LINE, MODERN)
+   DEDICATED BRAND BANNER (ABOVE HOME MENU BANNER LINE)
+   ========================================================================== */
+.brand-banner {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--slate-200);
+  padding: clamp(0.6rem, 1.1vw, 0.85rem) 0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  position: relative;
+  z-index: 90;
+}
+
+.brand-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(0.65rem, 1.8vw, 1.25rem);
+}
+
+.brand-banner-identity {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 1.35vw, 1.15rem);
+  min-width: 0;
+}
+
+.brand-banner-logo-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brand-banner-emblem {
+  width: clamp(50px, 4.8vw, 62px);
+  height: clamp(50px, 4.8vw, 62px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+  box-shadow: 0 3px 10px rgba(200, 16, 46, 0.16);
+  transition: transform var(--transition);
+}
+
+.brand-banner-logo-link:hover .brand-banner-emblem {
+  transform: scale(1.04);
+}
+
+.brand-banner-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brand-banner-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.1rem, 1.85vw, 1.55rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--slate-900);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.28rem;
+}
+
+.brand-name-lead {
+  color: var(--slate-900);
+}
+
+.brand-name-highlight {
+  color: var(--primary);
+}
+
+.brand-banner-tagline {
+  font-size: clamp(0.68rem, 0.92vw, 0.78rem);
+  font-weight: 500;
+  color: var(--slate-600);
+  margin: 0.22rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  line-height: 1.35;
+}
+
+.tagline-sep {
+  color: var(--primary);
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+/* Right-side quick desk pills on desktop banner */
+.brand-banner-desk-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.banner-pill-card {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.35rem 0.8rem;
+  background: var(--slate-50);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-capsule);
+  transition: all var(--transition);
+}
+
+.banner-pill-card:hover {
+  background: #fff;
+  border-color: rgba(200, 16, 46, 0.3);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pill-card-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pill-card-icon.emergency {
+  background: rgba(200, 16, 46, 0.12);
+  color: var(--primary);
+}
+
+.pill-card-icon.donor {
+  background: rgba(2, 132, 199, 0.12);
+  color: #0284c7;
+}
+
+.pill-card-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.pill-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.pill-card-lbl {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--slate-500);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.pill-card-phone {
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--slate-900);
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.pill-card-phone:hover {
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   HOME MENU BANNER LINE (CAPSULE-TYPE MENU BUTTONS, NO NAME LEFT OF HOME)
    ========================================================================== */
 .site-header {
   position: sticky;
@@ -274,13 +447,13 @@ ul, ol {
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--slate-200);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
-  height: 62px;
+  height: 54px;
   transition: all var(--transition);
 }
 
 .site-header.scrolled {
   box-shadow: 0 3px 14px rgba(15, 23, 42, 0.08);
-  height: 58px;
+  height: 50px;
 }
 
 .header-container {
@@ -294,7 +467,24 @@ ul, ol {
   padding: 0 clamp(0.65rem, 1.8vw, 1.25rem);
 }
 
-/* Brand Link */
+/* Mobile-only compact emblem indicator (Hidden on desktop; zero name text) */
+.mobile-header-emblem {
+  display: none;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.mini-emblem {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--primary);
+  box-shadow: 0 1px 4px rgba(200, 16, 46, 0.15);
+}
+
+/* Drawer & fallback brand elements */
 .brand-link {
   display: flex;
   align-items: center;
@@ -305,12 +495,11 @@ ul, ol {
 }
 
 .brand-emblem {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   object-fit: cover;
   border: 1.5px solid var(--primary);
-  box-shadow: 0 2px 6px rgba(200, 16, 46, 0.15);
   flex-shrink: 0;
 }
 
@@ -323,11 +512,9 @@ ul, ol {
 .brand-name {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: clamp(0.74rem, 2.3vw, 0.94rem);
+  font-size: 0.86rem;
   color: var(--slate-900);
   line-height: 1.15;
-  letter-spacing: -0.01em;
-  white-space: normal;
 }
 
 .brand-name span {
@@ -335,22 +522,21 @@ ul, ol {
 }
 
 .brand-sub {
-  font-size: clamp(0.56rem, 1.6vw, 0.63rem);
+  font-size: 0.62rem;
   font-weight: 600;
   color: var(--slate-500);
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  white-space: nowrap;
 }
 
-/* Capsule-Type Desktop Navigation */
+/* Capsule-Type Desktop Navigation (Starts immediately with Home, no name clutter) */
 .main-nav {
   display: flex;
   align-items: center;
-  gap: clamp(0.15rem, 0.45vw, 0.5rem);
+  gap: clamp(0.18rem, 0.45vw, 0.45rem);
   white-space: nowrap;
   flex-wrap: nowrap;
-  margin: 0 0.4rem;
+  margin: 0;
 }
 
 /* True Capsule Buttons for Nav */
@@ -495,6 +681,12 @@ ul, ol {
 }
 
 @media (max-width: 1040px) {
+  .brand-banner-desk-pills {
+    display: none;
+  }
+  .mobile-header-emblem {
+    display: flex;
+  }
   .main-nav {
     display: none;
   }
@@ -504,8 +696,14 @@ ul, ol {
 }
 
 @media (max-width: 768px) {
+  .brand-banner-container {
+    justify-content: flex-start;
+  }
+  .brand-banner-identity {
+    gap: 0.65rem;
+  }
   .site-header {
-    height: 58px;
+    height: 52px;
   }
   .header-cta-group .btn {
     padding: 0.32rem 0.65rem;
@@ -514,6 +712,17 @@ ul, ol {
 }
 
 @media (max-width: 580px) {
+  .brand-banner {
+    padding: 0.45rem 0;
+  }
+  .brand-banner-emblem {
+    width: 44px;
+    height: 44px;
+  }
+  .brand-banner-tagline .tagline-service,
+  .brand-banner-tagline .tagline-sep:nth-of-type(2) {
+    display: none;
+  }
   .header-cta-group .header-call-btn:first-child {
     display: none; /* Donate button is prominently in the floating bottom bar & drawer */
   }
@@ -525,7 +734,7 @@ ul, ol {
 
 @media (max-width: 420px) {
   .header-cta-group .header-call-btn span {
-    display: none; /* Icon-only on very compact mobile devices to leave full room for brand name */
+    display: none; /* Icon-only on very compact mobile devices to leave full room for action buttons */
   }
   .header-cta-group .header-call-btn {
     width: 34px;

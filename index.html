@@ -43,20 +43,64 @@
   </div>
 
   <!-- ==========================================================================
-       SITE HEADER WITH CAPSULE-TYPE MENU BUTTONS (SINGLE LINE, CLEAN)
+       MAIN BRAND BANNER WITH EMBLEM LOGO & BLOOD BANK NAME (ABOVE HOME MENU)
+       ========================================================================== -->
+  <section class="brand-banner" id="brandBanner" aria-label="Blood Centre Brand Banner">
+    <div class="container brand-banner-container">
+      <div class="brand-banner-identity">
+        <a href="#home" class="brand-banner-logo-link" aria-label="Prayagraj Charitable Blood Centre Homepage">
+          <img src="assets/images/pcbc_official_emblem.jpg" alt="Prayagraj Charitable Blood Centre Official Emblem" class="brand-banner-emblem">
+        </a>
+        <div class="brand-banner-info">
+          <h1 class="brand-banner-title">
+            <span class="brand-name-lead">PRAYAGRAJ CHARITABLE</span>
+            <span class="brand-name-highlight">BLOOD CENTRE</span>
+          </h1>
+          <p class="brand-banner-tagline">
+            <span class="tagline-unit">A Unit of Anant Samaj Sangam Society</span>
+            <span class="tagline-sep">•</span>
+            <span class="tagline-service">24/7 Transfusion &amp; Component Services</span>
+            <span class="tagline-sep">•</span>
+            <span class="tagline-loc">Tagore Town, Prayagraj</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="brand-banner-desk-pills">
+        <div class="banner-pill-card">
+          <div class="pill-card-icon emergency">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
+          </div>
+          <div class="pill-card-text">
+            <span class="pill-card-lbl">24/7 Emergency Desk</span>
+            <a href="tel:05323552983" class="pill-card-phone">0532-3552983</a>
+          </div>
+        </div>
+
+        <div class="banner-pill-card">
+          <div class="pill-card-icon donor">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <div class="pill-card-text">
+            <span class="pill-card-lbl">Voluntary Donor Line</span>
+            <a href="tel:+919956671400" class="pill-card-phone">+91 99566 71400</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HOME MENU BANNER LINE (CAPSULE-TYPE MENU, NO NAME ON LEFT OF HOME)
        ========================================================================== -->
   <header class="site-header" id="siteHeader">
     <div class="container header-container">
-      <!-- Official Emblem & Brand Title -->
-      <a href="#home" class="brand-link" aria-label="Prayagraj Charitable Blood Centre Homepage">
-        <img src="assets/images/pcbc_official_emblem.jpg" alt="Prayagraj Charitable Blood Centre Official Emblem" class="brand-emblem">
-        <div class="brand-text">
-          <span class="brand-name">PRAYAGRAJ CHARITABLE <span>BLOOD CENTRE</span></span>
-          <span class="brand-sub">Tagore Town, Prayagraj</span>
-        </div>
+      <!-- Mobile-only compact emblem indicator (hidden on desktop; zero name text) -->
+      <a href="#home" class="mobile-header-emblem" aria-label="Prayagraj Charitable Blood Centre">
+        <img src="assets/images/pcbc_official_emblem.jpg" alt="PCBC" class="mini-emblem">
       </a>
 
-      <!-- Desktop Nav (Capsule-Type Buttons, Clean, Single-Line) -->
+      <!-- Desktop Nav (Capsule-Type Buttons, Clean, Starts directly with Home) -->
       <nav class="main-nav" aria-label="Main Navigation">
         <a href="#home" class="nav-item capsule-item active">Home</a>
         <a href="#impact" class="nav-item capsule-item">Impact</a>
@@ -69,7 +113,7 @@
         <a href="#contact" class="nav-item capsule-item">Contact</a>
       </nav>
 
-      <!-- Action Buttons (Pointing to Blood Bank Contact Numbers) -->
+      <!-- Action Buttons (Pointing directly to Blood Bank Helplines) -->
       <div class="header-cta-group">
         <a href="tel:+919956671400" class="btn btn-capsule-primary btn-sm header-call-btn" onclick="openContactModal('donor'); return true;" title="Call Donation Line: +91 99566 71400">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/></svg>
